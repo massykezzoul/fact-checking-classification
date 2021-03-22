@@ -11,5 +11,6 @@ Le jeu de données utilisé est [ClaimsKG]("https://github.com/claimskg"). Il a 
 
 ## Auteurs du projet
 
+- Elhouiti Chakib -> celhouiti@gmail.com
 - Kezzoul Massili -> massy.kezzoul@gmail.com
   
