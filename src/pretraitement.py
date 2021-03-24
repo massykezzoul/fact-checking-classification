@@ -49,10 +49,10 @@ class TextPreTraitement:
         self._number2words = number2words
         self._language = language
 
-    def fit(self, X):
+    def fit(self, X, y=None):
         return self
 
-    def transform(self, X):
+    def transform(self, X, y=None):
         transformed = X
         if self._lowercase:
             transformed = self.lowercase(transformed)
@@ -94,8 +94,32 @@ class TextPreTraitement:
         else:
             return [" ".join(text) for text in transformed]
 
-    def fit_transform(self, X):
+    def fit_transform(self, X, y=None):
         return self.fit(X).transform(X)
+
+    """
+        Get pretraitement params
+        @return dict
+    """
+    def get_params(self, deep=True):
+        return {
+            'lowercase':self._lowercase,
+            'stem':self._stem,
+            'stopword':self._stopword,
+            'lem':self._lem,
+            'pos_tag': self._pos_tag,
+            'ponctuation': self._ponctuation,
+            'contraction': self._contraction,
+            'tokenize': self._tokenize,
+            'number2words': self._number2words,
+            'language': self._language
+        }    
+    
+    def set_params (self, **parameters):
+        for parameter, value in parameters.items():
+            setattr(self,'_'+parameter,value)
+        return self    
+
 
     """
         Définitions des méthodes de prétraitement
