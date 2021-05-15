@@ -251,7 +251,7 @@ if __name__ == "__main__":
 
     pretraitement = TextPreTraitement(
         lowercase=True,
-        lem=True,
+        stem=True,
         pos_tag=True,
         ponctuation=True,
         contraction=True,
