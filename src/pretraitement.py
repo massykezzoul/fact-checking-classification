@@ -233,7 +233,7 @@ class TextPreTraitement:
             for words, pos_tag in zip(lst_tokenized,lst_pos_tag):
                 if len(words) == len(pos_tag):
                     lem = []
-                    pos_tag = [TextPreTraitement.get_wordnet_pos(p[1]) for p in pos_tag]
+                    pos_tag = [TextPreTraitement.get_wordnet_pos(p) for p in pos_tag]
                     for w, pos in zip(words,pos_tag):
                         if pos is None:
                             lem.append(lemmatizer.lemmatize(w))
@@ -251,12 +251,9 @@ if __name__ == "__main__":
 
     pretraitement = TextPreTraitement(
         lowercase=True,
-        stem=True,
-        pos_tag=True,
+        stopword=False,
+        lem=True,
         ponctuation=True,
-        contraction=True,
-        tokenize=True,
-        stopword=True,
         number2words=True
     )
 
