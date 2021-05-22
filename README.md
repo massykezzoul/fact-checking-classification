@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Ce projet a pour but de proposer des modèles de classification supervisée d'assertions faites par des figures politiques selon leur valeur de véracité, ou autrement dit, de proposer une approche de fact-checking automatique.
+Ce projet a pour but de proposer des modèles de classification supervisée d'assertions faites par des figures politiques selon leurs valeurs de véracité, ou autrement dit, de proposer une approche de fact-checking automatique.
 
 ## Les données
 
